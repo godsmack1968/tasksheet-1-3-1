@@ -1,10 +1,17 @@
+```java
 package Task13;
+
 class Dish {
     String[] ingredients;
+    String dishName;
 
     void showIngredients() {
-        for (String item : ingredients) {
-            System.out.print(item + ", ");
+        System.out.print(dishName + ": ");
+        for (int i = 0; i < ingredients.length; i++) {
+            System.out.print(ingredients[i]);
+            if (i < ingredients.length - 1) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
     }
@@ -13,24 +20,28 @@ class Dish {
 // Extended classes
 class Afritada extends Dish {
     Afritada() {
+        dishName = "Afritada";
         ingredients = new String[]{"Tomato Sauce", "Meat", "Potatoes & Carrots", "Hotdog"};
     }
 }
 
 class Mechado extends Dish {
     Mechado() {
+        dishName = "Mechado";
         ingredients = new String[]{"Tomato Sauce", "Meat"};
     }
 }
 
 class Menudo extends Dish {
     Menudo() {
+        dishName = "Menudo";
         ingredients = new String[]{"Tomato Sauce", "Liver Spread", "Raisins"};
     }
 }
 
 class Caldereta extends Dish {
     Caldereta() {
+        dishName = "Caldereta";
         ingredients = new String[]{"Tomato Paste", "Meat", "Cheese"};
     }
 }
@@ -49,3 +60,4 @@ public class Task131 {
         meal4.showIngredients();
     }
 }
+
