@@ -1,4 +1,4 @@
-```java
+
 package Task13;
 
 class Dish {
